@@ -1,0 +1,20 @@
+{
+  "name": "test-gulp",
+  "version": "0.0.0",
+  "authors": [
+    "Fernando Falci <ffalci@kenzanmedia.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.2",
+    "bootstrap": "~3.3.5",
+    "angular-route": "~1.4.2"
+  }
+}
