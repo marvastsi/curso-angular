@@ -8,9 +8,9 @@ var base = __dirname;
 var config = {
   files: {
     source: [
-      base.concat('/src/*'),
-      base.concat('/src/**/*'),
-      "!" + base.concat('/src/**/*-spec.js')
+      base.concat('/app/*'),
+      base.concat('/app/**/*'),
+      "!" + base.concat('/app/**/*-spec.js')
     ],
     bower: base.concat('/bower_components/**/*'),
     build: base.concat('/dist/**')
