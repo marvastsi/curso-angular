@@ -1,26 +1,33 @@
 <h2>Controller</h2>
 
- 
-<input ng-model="vm.item.nome" />
+<div class="col-sm-6">
 
-<br />
-<input type="checkbox" ng-model="vm.item.pizza" /> pizza?
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input id="nome"  class="form-control" ng-model="vm.item.nome" placeholder="Nome"/>
+  </div>
 
-<br />
-<button 
-  class="btn btn-success" 
-  ng-click="vm.adicionar()">Adicionar</button>
-<button 
-  class="btn btn-warning" 
-  ng-click="vm.cancelar()">Cancelar</button>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="vm.item.pizza"> Pizza?
+    </label>
+  </div>
 
-<br /><br />
+  <button class="btn btn-success" ng-click="vm.adicionar()">Adicionar</button>
+  <button class="btn btn-warning" ng-click="vm.cancelar()">Cancelar</button>
+</div>
 
-<ul>
-  <li ng-repeat="item in vm.participantes">
-    Nome: {{item.nome}}, 
-    pizza: {{item.pizza ? 'Sim':'Não'}}
-    <button class="btn btn-warning" ng-click="vm.editar(item)"><i class="glyphicon glyphicon-pencil"></i></button>
-    <button class="btn btn-danger" ng-click="vm.excluir(item)"><i class="glyphicon glyphicon-trash"></i></button>
-  </li>
-</ul>
+<div class="clearfix"></div>
+
+<div class="col-sm-6" style="margin-top: 10px">
+
+  <ul class="list-unstyled">
+    <li ng-repeat="item in vm.participantes">
+      <button class="btn btn-warning" ng-click="vm.editar(item)"><i class="glyphicon glyphicon-pencil"></i></button>
+      <button class="btn btn-danger" ng-click="vm.excluir(item)"><i class="glyphicon glyphicon-trash"></i></button>
+      Nome: {{item.nome}},
+      Pizza: {{item.pizza ? 'Sim':'Não'}}
+    </li>
+  </ul>
+
+</div>
