@@ -3,5 +3,6 @@ angular.module('app', [
 
   // controllers
   'app.controller.home',
-  'app.controller.sobre'
+  'app.controller.sobre',
+  'app.controller.controller'
 ]);
