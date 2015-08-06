@@ -38,6 +38,7 @@
 Já vistas
 * ngApp
 * ngController
+* ngView
 
 De hoje
 * ngModel
