@@ -1,9 +1,8 @@
-angular.module('app.controller.ControllerController', [])
-.controller('ControllerController', Controller);
+angular.module('app.controller.UserController', [])
+.controller('UserController', Controller);
 
 function Controller (UserModel) {
   var vm = this;
-  var id = 11;
   var copia;
 
   vm.adicionar = adicionar;
@@ -12,17 +11,12 @@ function Controller (UserModel) {
   vm.cancelar = cancelar;
 
   function adicionar () {
-    if(!vm.item.id){
-      vm.item.id = id++;
-      vm.participantes.push( vm.item );
-    }
-
-    vm.item = {}; // new Object();
+    UserModel.save( vm.item );
+    vm.item = {};
   }
 
   function editar (item) {
-    copia = angular.copy(item);
-
+    copia = angular.copy( item );
     vm.item = item;
   }
 
@@ -32,11 +26,8 @@ function Controller (UserModel) {
   }
 
   function excluir (item) {
-    vm.participantes = vm.participantes.filter(function (user) {
-      return item != user;
-    });
+    vm.participantes = UserModel.remove( item );
   }
-
 
   vm.participantes = UserModel.getItems();
 }

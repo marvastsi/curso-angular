@@ -1,0 +1,8 @@
+<div>
+	<i class="glyphicon glyphicon-search"></i>
+  <input id="filtro" ng-model="value.nome" title="Filter by nome"/>
+  <input type="checkbox" ng-model="value.pizza" /> {{texto}}
+  <button class="btn btn-default" ng-if="value != null" ng-click="limpar()" title="Limpar filtro">
+  	<i class="glyphicon glyphicon-refresh"></i> Limpar
+  </button>
+</div>

@@ -32,9 +32,18 @@ body {
 	text-decoration: none
 }
 
-
 .pessoa img {
 	width: 150px;
 	height: 150px;
 
+}
+
+.nowrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.filter {
+  float: left;
+  margin-right: 5px;
 }
