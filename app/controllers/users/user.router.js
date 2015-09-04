@@ -3,10 +3,10 @@ angular.module('app.controller.user', [
 ])
 .config(function ($routeProvider){
 
-  $routeProvider.when('/user', {
+  $routeProvider.when('/users', {
     controller: 'UserController',
     controllerAs: 'vm',
-    templateUrl: 'controllers/user/user.html'
+    templateUrl: 'controllers/users/user.html'
   })
 
 });

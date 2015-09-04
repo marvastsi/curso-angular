@@ -1,0 +1,18 @@
+<h1>Áreas</h1>
+<button ng-click="vm.atualizar()" class="btn btn-primary">Refresh</button>
+<input ng-model="vm.item.nome" placeholder="Nome"/>
+
+<button ng-click="vm.adicionar()" class="btn btn-success"><i class="glyphicon glyphicon-plus"/> Adicionar</button>
+<button ng-click="vm.cancelar()" class="btn btn-danger"><i class="glyphicon glyphicon-remove"/> Cancelar</button>
+
+<br />
+<br />
+<h3>Áreas: </h3>
+<ul>
+  <li ng-repeat="item in vm.items">
+    {{item.id}})&nbsp;
+    {{item.nome}}
+    <button ng-click="vm.remover(item)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"/></button>
+    <button ng-click="vm.editar(item)" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"/></button>
+  </li>
+</ul>
